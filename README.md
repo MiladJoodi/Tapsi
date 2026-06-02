@@ -1,36 +1,42 @@
-# تپسی — نمونه کار Next.js
+# Tapsi — Next.js Demo
 
-پیاده‌سازی چندصفحه‌ای UI تپسی (RTL، فارسی) بر اساس قالب HTML اولیه. پروژه نمونه‌کار آموزشی/نمایشی است و وابسته به برند رسمی تپسی نیست.
+Multi-page RTL Persian UI based on the original HTML template. Educational/demo project; not affiliated with the official Tapsi brand.
 
-**مخزن:** [github.com/MiladJoodi/Tapsi](https://github.com/MiladJoodi/Tapsi)  
-**توسعه‌دهنده:** [Milad Joodi](https://www.linkedin.com/in/joodi/)
+**Repository:** [github.com/MiladJoodi/Tapsi](https://github.com/MiladJoodi/Tapsi)  
+**Author:** [Milad Joodi](https://www.linkedin.com/in/joodi/)
 
-## فناوری
+## Stack
 
 Next.js 16 · React 19 · TypeScript · Tailwind CSS v4
 
-## اجرا
+## Getting started
 
 ```bash
 npm install
 npm run dev
 ```
 
-مرورگر: `http://localhost:3000`
+Open [http://localhost:3000](http://localhost:3000).
 
 ```bash
-npm run build   # ساخت production
-npm run start   # اجرای build
+npm run build   # production build
+npm run start   # run production server
 ```
 
-## صفحات اصلی
+## Main routes
 
 `/` · `/about` · `/services` · `/download` · `/pricing` · `/blog` · `/faq` · `/contact` · `/careers` · `/portfolio` · `/team` · `/privacy` · `/terms`
 
-## ساختار
+## Structure
 
-`src/app` صفحات · `src/components` UI · `src/data` محتوا · `public/assets` تصاویر · `public/fonts` فونت وزیر
+| Path | Purpose |
+|------|---------|
+| `src/app` | Pages & routes |
+| `src/components` | UI components |
+| `src/data` | Typed content |
+| `public/assets` | Images |
+| `public/fonts` | Vazir font files |
 
-## یادداشت
+## Credits
 
-طراحی اولیه: [Nasim-Parsa/Tapsi_Demo](https://github.com/Nasim-Parsa/Tapsi_Demo). تبدیل به Next.js توسط Milad Joodi.
+Initial HTML design: [Nasim-Parsa/Tapsi_Demo](https://github.com/Nasim-Parsa/Tapsi_Demo). Next.js implementation by [Milad Joodi](https://www.linkedin.com/in/joodi/).
