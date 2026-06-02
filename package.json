@@ -1,0 +1,47 @@
+{
+  "name": "tapsi-next",
+  "version": "1.0.0",
+  "description": "نمونه کار چندصفحه‌ای UI تپسی با Next.js — RTL، فارسی، App Router",
+  "private": true,
+  "author": {
+    "name": "Milad Joodi",
+    "url": "https://www.linkedin.com/in/joodi/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MiladJoodi/Tapsi.git"
+  },
+  "homepage": "https://github.com/MiladJoodi/Tapsi#readme",
+  "bugs": {
+    "url": "https://github.com/MiladJoodi/Tapsi/issues"
+  },
+  "keywords": [
+    "tapsi",
+    "nextjs",
+    "react",
+    "rtl",
+    "persian",
+    "portfolio"
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "next": "16.2.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.6",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

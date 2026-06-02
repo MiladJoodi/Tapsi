@@ -1,0 +1,211 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Vazir";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/Vazir-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Vazir";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/Vazir-Bold.woff2") format("woff2");
+}
+
+:root {
+  --color-primary: #ff5722;
+  --color-primary-light: #ff7a50;
+  --color-navbar: #f8f8f8;
+  --color-secondary-light: #fff6f2;
+  --color-secondary-dark: #ffa589;
+  --color-headings: #000000;
+  --color-body: #333333;
+  --color-white: #ffffff;
+  --background: #ffffff;
+  --foreground: #333333;
+  --font-vazir: "Vazir", Tahoma, "Segoe UI", sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: #ff5722;
+  --color-primary-light: #ff7a50;
+  --color-secondary-light: #fff6f2;
+  --color-secondary-dark: #ffa589;
+  --font-sans: var(--font-vazir);
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-vazir);
+}
+
+body {
+  background: var(--background);
+  color: var(--color-body);
+  font-size: 1.4rem;
+  line-height: 1.7;
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 1.8rem;
+  }
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-headings);
+  font-weight: 700;
+}
+
+/* Hero — override global heading color */
+.hero-intro .hero-intro__title,
+.hero-intro .hero-intro__subtitle {
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 3.5rem;
+  }
+}
+
+.list-tick li {
+  background: url("/assets/checkmark-16.png") no-repeat right center;
+  padding-right: 3rem;
+  margin-bottom: 1.5rem;
+  list-style: none;
+}
+
+@media (min-width: 1024px) {
+  .list-tick li {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+  }
+}
+
+/* LTR fields inside RTL layout (email, phone) */
+.input-ltr {
+  direction: ltr;
+  text-align: right;
+  unicode-bidi: plaintext;
+}
+
+.input-ltr::placeholder {
+  direction: rtl;
+  text-align: right;
+  unicode-bidi: embed;
+}
+
+.form-input::placeholder {
+  color: #888;
+  font-family: var(--font-vazir);
+}
+
+/* Contact page grid */
+@media (min-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "info form"
+      "map form"
+      "social form";
+  }
+
+  .contact-grid__info {
+    grid-area: info;
+  }
+
+  .contact-grid__map {
+    grid-area: map;
+  }
+
+  .contact-grid__social {
+    grid-area: social;
+  }
+
+  .contact-grid__form {
+    grid-area: form;
+  }
+}
+
+.contact-info-row {
+  padding: 1rem 1.2rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.contact-info-row:hover {
+  box-shadow: 0 8px 28px rgba(255, 87, 34, 0.12);
+  transform: translateX(-4px);
+}
+
+.contact-form-card {
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+}
+
+.section-title-decorated::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 4px;
+  margin: 1.2rem auto 0;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
+}
+
+/* FAQ — RTL alignment */
+.faq-accordion__trigger {
+  direction: rtl;
+}
+
+.faq-accordion__question {
+  text-align: right;
+}
+
+.faq-accordion__panel p {
+  text-align: right;
+}
+
+.faq-accordion__toggle {
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+.download-cta__title {
+  color: #ffffff;
+}
+
+/* Download page store buttons */
+.store-btn img {
+  flex-shrink: 0;
+}
